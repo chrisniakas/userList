@@ -1,0 +1,40 @@
+.table td {
+    border-top: 0px;
+}
+
+
+.user-name{
+    font-weight: bold;
+}
+
+.user-email{
+color:grey
+}
+
+img {
+    border-radius: 50%;;
+    height: 60px;
+}
+
+ .tester{
+    overflow: auto;
+    width: 350px;
+    height: 520px;   
+}
+.user-info{
+    height: 85px;
+}
+
+.highlighted{
+    background:  #1b68b3;
+}
+
+.general {
+    background-color: white;
+    position: relative;
+    top: 202px;
+}
+.info{
+    width: 250px;
+    
+}

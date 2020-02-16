@@ -1,0 +1,26 @@
+input {
+    width: 100%;
+    height: 40px;
+    border: 5px solid #ececec;
+}
+
+.label-name {
+    margin-top: 15px;
+    color: grey
+}
+.btn{
+    background-color: #f7f7f7;
+    border-color: #f7f7f7;
+    margin-right: 10px;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #1b68b3;
+    border-color: #1b68b3;
+}
+.button-allign {
+    margin-top: 25px;
+    position : relative;
+    left: 95px;
+}

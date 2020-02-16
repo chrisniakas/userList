@@ -12,14 +12,16 @@ export class UserService {
   email: string;
   address: string;
   company: string
+  id: number
+  photo: string
 
   constructor() { }
 
-  createForm(user?:UserModel){    
-    console.log(user);
-    
+  createForm(user?:UserModel){     
     
 
+    this.id =  user && user.id 
+    this.photo =  user && user.photo 
     this.name =  user && user.name ? user.name : '';
     this.phone = user && user.phone  ?user.phone : '';
     this.email =   user && user.email  ? user.email : '';     
@@ -32,7 +34,9 @@ export class UserService {
         phone: new FormControl (this.phone),
         email: new FormControl ( this.email),
         address: new FormControl ( this.address),
-        company: new FormControl ( this.company)       
+        company: new FormControl ( this.company),       
+        id : new FormControl ( this.id),       
+        photo : new FormControl ( this.photo)       
       })    
     } 
  

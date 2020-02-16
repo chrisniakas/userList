@@ -13,24 +13,32 @@ export class UserListComponent implements OnInit {
   users: UserModel = USERS 
   rowClicked: boolean = false
   form: FormGroup
-  save: boolean 
-  cancel: boolean 
+ 
+  selectedUser: number
+  currentUser
   constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
-  onRowClick(i){
+  onRowClick(i:number, user:UserModel){
+   if(this.form && this.form.value){ 
+     this.form.reset();
+    } 
+    
    this.form = this.userService.createForm(this.users[i]);
-    this.rowClicked = true;
+   this.selectedUser = i
+   this.currentUser = user.name
+   console.log(this.currentUser);
+   
+   this.rowClicked = true;
 
   }
-  onSave(){
-  this.save = true
+  onSave(update: UserModel){    
+    this.users[this.selectedUser] = update;
   }
-  onClose(){
-    this.cancel = true
-    console.log(this.cancel, this.save);
-    
-  }
+ onCancel(){    
+   this.form.patchValue(this.users[this.selectedUser])
+ 
+ }
 }

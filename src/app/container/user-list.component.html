@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="general">
+        <div class="row">       
+           
+                <div class="tester">  
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table table-hover">             
+                            <tbody>                              
+                                <tr *ngFor="let user of users; 
+                                            let i = index;"
+                                            [class.highlighted]="user.name === currentUser"
+                                            class="d-flex justify-content-start align-items-cente user-info" 
+                                            (click)="onRowClick(i, user)">                                 
+                                    <td scope="col" >
+                                            <img src="{{user.photo}}">
+                                    </td>    
+                                    <td scope="col">
+                                        <div class="user-name">{{user.name}}</div>
+                                        <div class="user-email">{{user.email}}</div>
+                                    </td>   
+                                </tr>                          
+                            </tbody>    
+                        </table>
+                   </div>
+                </div>
+                </div>                
+         
+            <div *ngIf="rowClicked" class="info">   
+                <app-user-info 
+                [form]="form"             
+                (editUser)="onSave($event)"
+                (resetUser)="onCancel()"></app-user-info>              
+            </div>       
+        </div>       
+    </div>
+</div>

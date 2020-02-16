@@ -1,0 +1,58 @@
+<div class="panel panel-default">
+    <div class="test">             
+    <form [formGroup]="form">
+                        <div class="col">
+                            <div class="label-name">
+                                <label>Name</label>                                  
+                            </div>
+                            <div>
+                                <input class="border" type="text"  formControlName ="name" >                                           
+                            </div>
+                         </div>                  
+                           
+                         
+                         <div class="col">
+                                <div class="label-name">
+                                 <label>Email address</label>                                            
+                                </div>
+                                <div>
+                                 <input class="border" type="text"  formControlName ="email" >    
+                                </div>                                       
+                        </div>                   
+                                          
+                            
+                     
+                        <div class="col">
+                            <div class="label-name">
+                                <label>Phone</label>                                                
+                            </div>
+                            <div>
+                                <input class="border"  type="text"  formControlName ="phone" >                                           
+                            </div>
+                        </div>                   
+                                            
+
+                        <div class="col">   
+                            <div class="label-name">
+                                <label>Address</label>
+                            </div>
+                            <div>
+                                <input class="border" type="text"  formControlName ="address" >                                                                                                
+                            </div>
+                        </div>         
+
+                        <div class="col">                                              
+                            <div class="label-name">
+                                <label>Company</label>                                             
+                            </div>
+                            <div>
+                                <input class="border" type="text"  formControlName ="company" >                                                                
+                            </div>                                                
+                        </div>                                                       
+                      <div class="button-allign" >
+                        <button *ngIf="showCancelButton" type="button" class="btn btn" (click)="onClose()" >Cancel</button>
+                        <button [disabled]="disableSaveButton" type="button" class="btn btn-primary"(click)="onSave()" >Save</button>
+                      </div>           
+        </form>                  
+    </div>       
+</div>      
